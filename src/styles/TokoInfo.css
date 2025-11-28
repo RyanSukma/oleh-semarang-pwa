@@ -1,0 +1,233 @@
+/* Toko Info Section */
+.toko-info-section {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.toko-info-header {
+  margin-bottom: 20px;
+}
+
+.toko-info-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Toko Info Card */
+.toko-info-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.toko-name-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.toko-icon {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toko-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  flex: 1;
+}
+
+/* Contact List */
+.toko-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toko-contact-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.toko-contact-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.contact-icon {
+  font-size: 20px;
+}
+
+.contact-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-value {
+  font-size: 16px;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Clickable Contact */
+.contact-value.clickable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.contact-value.clickable:hover {
+  background: #eff6ff;
+  transform: translateX(4px);
+}
+
+.contact-arrow {
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.contact-value.clickable:hover .contact-arrow {
+  transform: translateX(4px);
+}
+
+/* Contact Value Wrapper (untuk alamat dengan button) */
+.contact-value-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Button Maps */
+.btn-maps {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+}
+
+.btn-maps:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.btn-maps:active {
+  transform: translateY(0);
+}
+
+/* No Contact Message */
+.toko-no-contact {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toko-info-card {
+    padding: 20px;
+  }
+
+  .toko-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+  }
+
+  .toko-name {
+    font-size: 20px;
+  }
+
+  .toko-contact-item {
+    padding: 14px;
+  }
+
+  .contact-value {
+    font-size: 15px;
+  }
+
+  .btn-maps {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .toko-info-section {
+    margin-top: 24px;
+    padding-top: 24px;
+  }
+
+  .toko-info-card {
+    padding: 16px;
+  }
+
+  .toko-name {
+    font-size: 18px;
+  }
+
+  .contact-icon {
+    font-size: 18px;
+  }
+
+  .contact-text {
+    font-size: 12px;
+  }
+
+  .contact-value {
+    font-size: 14px;
+  }
+}

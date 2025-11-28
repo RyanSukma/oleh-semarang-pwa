@@ -1,0 +1,112 @@
+/* Desktop Navbar - Brown Theme */
+.desktop-navbar {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(62, 39, 35, 0.12);
+  border-bottom: 1px solid #efebe9;
+  z-index: 1000;
+  height: 70px;
+}
+
+.desktop-navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-logo {
+  font-size: 32px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8b6f47, #6d4c3d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #8d6e63;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: #faf8f6;
+  color: #6d4c3d;
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #8b6f47, #6d4c3d);
+  color: white;
+}
+
+.nav-link.active:hover {
+  background: linear-gradient(135deg, #6d4c3d, #5d4037);
+}
+
+.nav-link-icon {
+  font-size: 20px;
+}
+
+.nav-link-text {
+  font-weight: 600;
+}
+
+/* Show on Desktop */
+@media (min-width: 769px) {
+  .desktop-navbar {
+    display: block;
+  }
+  
+  /* Add padding to content to account for fixed navbar */
+  .page-container,
+  .home-page,
+  .detail-page {
+    padding-top: 90px; /* 70px navbar + 20px margin */
+  }
+  .navbar-logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+}

@@ -1,0 +1,546 @@
+/* Home Page - Brown Theme */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f1ed 0%, #ffffff 50%, #faf8f6 100%);
+  padding-bottom: 100px;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #8b6f47 0%, #6d4c3d 100%);
+  padding: 80px 20px 120px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  color: white;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.badge-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.hero-title-highlight {
+  display: block;
+  background: linear-gradient(90deg, #d4a574, #c17d3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 40px 0;
+  opacity: 0.95;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  font-size: 32px;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* Hero Image */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(239, 217, 195, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  animation: float-hero 6s ease-in-out infinite;
+}
+
+/* Logo Semar - Animasi aktif di desktop & mobile */
+.hero-emoji-image {
+  width: 260px;
+  height: auto;
+  animation: bounce-hero 6s ease-in-out infinite;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float-hero {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes bounce-hero {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+}
+
+/* Featured Section */
+.featured-section {
+  animation: fadeInUp 0.8s ease-out;
+  margin-top: 40px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.section-title-wrapper {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3e2723;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-icon {
+  font-size: 36px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #795548;
+  margin: 0;
+}
+
+.btn-view-all {
+  background: linear-gradient(135deg, #8b6f47, #6d4c3d);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-view-all:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
+}
+
+/* Featured Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.featured-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.featured-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(62, 39, 35, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(62, 39, 35, 0.2);
+}
+
+.featured-card-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.featured-card-large .featured-card-image {
+  height: 300px;
+}
+
+.featured-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.featured-card:hover .featured-card-image img {
+  transform: scale(1.1);
+}
+
+.featured-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(62, 39, 35, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.featured-card:hover .featured-card-overlay {
+  opacity: 1;
+}
+
+.view-detail {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.featured-card-content {
+  padding: 20px;
+}
+
+.featured-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3e2723;
+  margin: 0 0 8px 0;
+}
+
+.featured-card-description {
+  font-size: 14px;
+  color: #795548;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #efebe9;
+}
+
+.featured-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #bf360c;
+  display: none;
+}
+
+.featured-card-store {
+  font-size: 12px;
+  color: #795548;
+}
+
+/* Featured Card Rating */
+.featured-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+
+.rating-value {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #795548;
+  padding: 40px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+    display: flex;
+  }
+
+  /* Tambah padding bottom untuk tablet */
+  .hero-section {
+    padding: 60px 20px 140px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  /* Ukuran logo lebih kecil di tablet */
+  .hero-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-emoji-image {
+    width: 220px;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Padding bottom lebih besar untuk mobile */
+  .hero-section {
+    padding: 40px 20px 160px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+
+  /* Logo ukuran mobile */
+  .hero-image {
+    margin-bottom: 30px;
+  }
+
+  .hero-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-emoji-image {
+    width: 180px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 100px 20px; /* ✅ Tambahkan 100px padding-bottom */
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  /* Padding bottom maksimal untuk mobile kecil */
+  .hero-section {
+    padding: 30px 20px 180px;
+  }
+
+  .hero-image-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-emoji-image {
+    width: 160px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
+/* ⭐ Outline bintang emas */
+.featured-card-rating .star {
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.featured-card-rating .star.full {
+  color: #fbbf24;
+}
+
+.featured-card-rating .star.empty {
+  color: #fbbf24;
+  opacity: 1;
+}
+
+/* ========================================
+   JARAK FOOTER - RESPONSIVE
+   ======================================== */
+@media (min-width: 969px) {
+  .home-content {
+    padding-bottom: 80px; /* Desktop - jarak besar */
+  }
+}
+
+@media (max-width: 968px) {
+  .home-content {
+    padding-bottom: 80px; /* Tablet */
+  }
+}
+
+@media (max-width: 640px) {
+  .home-content {
+    padding-bottom: 60px; /* Mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding-bottom: 50px; /* Mobile kecil */
+  }
+}
