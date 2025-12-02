@@ -1,16 +1,104 @@
-# React + Vite
+# Oleh-oleh Semar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Nama:** Ryan Sukma Purwojanarko  
+**NIM:** 21120123130100
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deskripsi
 
-## React Compiler
+Oleh-oleh Semar merupakan sebuah platform web yang dirancang untuk memudahkan pengguna dalam menemukan berbagai pilihan oleh-oleh khas Semarang. Mulai dari makanan tradisional seperti lumpia, wingko babat, bandeng presto, hingga merchandise unik yang mencerminkan budaya kota, semuanya disajikan dalam satu tempat yang praktis dan mudah diakses.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Aplikasi ini hadir untuk membantu wisatawan, perantau, maupun masyarakat lokal yang ingin mencari rekomendasi oleh-oleh dengan cepat tanpa harus berkeliling kota. Setiap produk dilengkapi dengan deskripsi, gambar, serta informasi toko, sehingga pengguna dapat memilih sesuai kebutuhan dan preferensi mereka.
 
-## Expanding the ESLint configuration
+## Teknologi
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:**
+- React.js (Progressive Web App)
+- Vite
+
+**Backend:**
+- Node.js & Express.js
+- Supabase (Database & Authentication)
+- Deployed on Vercel
+
+## Struktur Proyek
+
+```
+TA-PPB/
+├── oleh-oleh-semarang-api/          # Backend API
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── config/                  # Konfigurasi database & environment
+│   │   ├── controllers/             # Logika bisnis
+│   │   ├── models/                  # Model database
+│   │   └── routes/                  # API routes
+│
+└── oleh-oleh-semarang-pwa/          # Frontend PWA
+    ├── dist/                        # Build production
+    ├── node_modules/
+    ├── public/                      # File statis publik
+    └── src/
+        ├── assets/                  # Gambar, icon, dll
+        ├── components/              # Komponen React reusable
+        ├── pages/                   # Halaman aplikasi
+        ├── services/                # API services & HTTP requests
+        └── styles/                  # CSS/styling files
+```
+
+## Instalasi
+
+### Frontend (PWA)
+
+1. Clone repository
+```bash
+git clone <repository-url>
+cd oleh-oleh-semarang-pwa
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Buat file `.env` dan tambahkan API URL
+```env
+VITE_API_URL=https://oleh-semarang-api.vercel.app/api
+```
+
+4. Jalankan aplikasi
+```bash
+npm run dev
+```
+
+### Backend (API)
+
+Backend sudah di-deploy di Vercel dan menggunakan Supabase sebagai database.
+
+API URL: `https://oleh-semarang-api.vercel.app`
+
+## Fitur Utama
+
+- Katalog makanan khas Semarang (lumpia, wingko babat, bandeng presto, dll)
+- Katalog merchandise dan souvenir khas Semarang
+- Detail produk lengkap dengan deskripsi dan gambar
+- Informasi toko untuk setiap produk
+- Ulasan dan rating produk
+- Progressive Web App (dapat diinstall di perangkat)
+
+## API Endpoints
+
+Base URL: `https://oleh-semarang-api.vercel.app/api`
+
+- `GET /makanan` - Mendapatkan daftar makanan
+- `GET /makanan/:id` - Detail makanan
+- `GET /merchandise` - Mendapatkan daftar merchandise
+- `GET /merchandise/:id` - Detail merchandise
+- `GET /ulasan` - Mendapatkan ulasan
+- `POST /ulasan` - Membuat ulasan baru
+
+
+## Link Demo
+
+- Frontend: https://oleh-semarang-pwa.vercel.app/
+- Backend API: https://oleh-semarang-api.vercel.app/api
+---
